@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marden – Innovative Web & Software Developer | Electronics & Hardware Enthusiast from the Philippines. Building integrated systems, IoT devices, and full-stack web apps." />
+  <meta name="keywords" content="web developer, software developer, electronics, hardware, IoT, Philippines, Arduino, Raspberry Pi, full-stack" />
+  <meta name="author" content="Marden" />
+  <title>Marden | Developer &amp; Hardware Enthusiast</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ CURSOR ═══════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">M<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <canvas id="heroCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for projects
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-text="Marden">Marden</span>
+      </h1>
+      <p class="hero-tagline">
+        Innovative <em>Web &amp; Software Developer</em><br />
+        Electronics &amp; Hardware Enthusiast
+      </p>
+      <p class="hero-sub">Building bridges between hardware and code — from circuit boards to full-stack apps.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>5+</strong><span>Years Coding</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>20+</strong><span>Projects Built</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>3</strong><span>Domains</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-image-wrap">
+           <div class="about-img-placeholder">
+              <img src="assets/marden (2).jpg" alt="Marden" />
+            </div> 
+            <div class="about-badge-card">
+              <i class="fa-solid fa-microchip"></i>
+              <span>Hardware + Software</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-eyebrow">About Me</div>
+          <h2 class="section-title">Developer who thinks in <em>circuits</em> and <em>code</em></h2>
+          <p>I'm Marden, a developer from <strong>Laoag Ilocos Norte, Philippines</strong> with a unique edge — I work across the full spectrum from web interfaces to bare-metal hardware. I design, prototype, and deploy integrated systems that bridge the digital and physical world.</p>
+          <p>Whether it's a React dashboard consuming live sensor data, a custom PCB, or a cloud-connected IoT device, I approach every project with curiosity and precision. My goal is always the same: build things that actually work, beautifully.</p>
+          <div class="about-tags">
+            <span>Web Developer</span>
+            <span>Software Engineer</span>
+            <span>Electronics</span>
+            <span>IoT Systems</span>
+            <span>Hardware Prototyping</span>
+            <span>Full-Stack</span>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-sm">
+            <span>Let's Work Together</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Expertise</div>
+        <h2 class="section-title">What I <em>work with</em></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-card-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Web Development</h3>
+          <div class="skill-list">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>React</span><span>Node.js</span><span>Express</span>
+            <span>MongoDB</span><span>REST APIs</span><span>Tailwind</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="100">
+          <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Software Development</h3>
+          <div class="skill-list">
+            <span>Python</span><span>Java</span><span>C++</span>
+            <span>Algorithms</span><span>SQLite</span><span>MySQL</span>
+            <span>App Dev</span><span>OOP</span><span>Git</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="200">
+          <div class="skill-card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Electronics &amp; Hardware</h3>
+          <div class="skill-list">
+            <span>Arduino</span><span>Raspberry Pi</span><span>ESP32</span>
+            <span>PCB Design</span><span>Soldering</span><span>Sensors</span>
+            <span>STM32</span><span>Circuit Design</span><span>Firmware C</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" data-delay="300">
+          <div class="skill-card-icon"><i class="fa-solid fa-link"></i></div>
+          <h3>Integration &amp; Other</h3>
+          <div class="skill-list">
+            <span>IoT Systems</span><span>MQTT</span><span>Bluetooth</span>
+            <span>Frontend</span><span>API Integration</span><span>Linux</span>
+            <span>Docker</span><span>Debugging</span><span>Prototyping</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Portfolio</div>
+        <h2 class="section-title">Selected <em>Projects</em></h2>
+      </div>
+
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="hardware">Hardware</button>
+        <button class="filter-btn" data-filter="iot">IoT</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal" data-category="iot" data-delay="0">
+          <div class="project-img" style="--accent:#00ff88">
+            <div class="project-icon"><i class="fa-solid fa-wifi"></i></div>
+            <div class="project-tech-overlay">
+              <span>Python Flask</span><span>MQTT</span><span>Raspberry Pi</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">IoT</span>
+            <h3>IoT Weather Station</h3>
+            <p>Combined hardware sensors on Raspberry Pi with a live web dashboard to monitor and display real-time environmental data via MQTT protocol.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="hardware" data-delay="100">
+          <div class="project-img" style="--accent:#0099ff">
+            <div class="project-icon"><i class="fa-solid fa-house-signal"></i></div>
+            <div class="project-tech-overlay">
+              <span>Arduino IDE</span><span>ESP32</span><span>Bluetooth</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Hardware</span>
+            <h3>Smart Home Automation</h3>
+            <p>Built a hardware setup using Arduino and sensors to control lights and appliances remotely via a custom mobile app over Bluetooth.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="software" data-delay="200">
+          <div class="project-img" style="--accent:#ff6b35">
+            <div class="project-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <div class="project-tech-overlay">
+              <span>Python</span><span>SQLite</span><span>Tkinter</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Software</span>
+            <h3>Inventory Management App</h3>
+            <p>Desktop application for tracking stock with full CRUD operations, database integration, and a clean GUI built with Python and Tkinter.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web" data-delay="300">
+          <div class="project-img" style="--accent:#c678dd">
+            <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="project-tech-overlay">
+              <span>React</span><span>Express.js</span><span>MongoDB</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Web</span>
+            <h3>E-Commerce Platform</h3>
+            <p>web application for online shopping with user authentication, product management, cart system, and payment integration.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="hardware" data-delay="400">
+          <div class="project-img" style="--accent:#e5c07b">
+            <div class="project-icon"><i class="fa-solid fa-helicopter"></i></div>
+            <div class="project-tech-overlay">
+              <span>STM32</span><span>Firmware C</span><span>Soldering</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Hardware</span>
+            <h3>Custom Drone Controller</h3>
+            <p>Designed and assembled hardware for a drone with custom firmware written in C for the STM32 microcontroller. Full PCB layout included.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="web" data-delay="500">
+          <div class="project-img" style="--accent:#56b6c2">
+            <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="project-tech-overlay">
+              <span>React</span><span>Node.js</span><span>Chart.js</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Web</span>
+            <h3>Analytics Dashboard</h3>
+            <p>Real-time analytics dashboard with interactive charts, data filtering, and role-based access. Designed for monitoring business KPIs.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="iot" data-delay="600">
+          <div class="project-img" style="--accent:#ff4757">
+            <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-tech-overlay">
+              <span>Arduino</span><span>Python</span><span>Serial</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">IoT</span>
+            <h3>Line Following Robot</h3>
+            <p>Autonomous robot using infrared sensors and PID control. Integrates with a Python GUI for live path visualization and tuning.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Video</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="software" data-delay="700">
+          <div class="project-img" style="--accent:#a9b0d0">
+            <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="project-tech-overlay">
+              <span>Python</span><span>TensorFlow</span><span>OpenCV</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Software</span>
+            <h3>Image Classifier App</h3>
+            <p>Machine learning image classification desktop app using TensorFlow and OpenCV. Trained on custom datasets with a simple GUI.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="proj-link proj-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Journey</div>
+        <h2 class="section-title">Achievements &amp; <em>Experience</em></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal" data-delay="0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2024</span>
+            <h3>Freelance Frontend Developer</h3>
+            <p>Delivered multiple web and IoT projects for clients in the Philippines and internationally. Specialized in React frontends with Node.js/Python backends.</p>
+            <div class="timeline-tags"><span>React</span><span>Node.js</span><span>IoT</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023</span>
+            <h3>Hardware Prototyping Contractor</h3>
+            <p>Designed and built custom PCB prototypes and microcontroller firmware for local tech startups. Led hardware-software integration for 3 products.</p>
+            <div class="timeline-tags"><span>PCB</span><span>STM32</span><span>Firmware</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2022</span>
+            <h3>Certified Web Developer</h3>
+            <p>Completed professional certification in Full-Stack Web Development. Built and deployed 5+ production-ready applications as part of the program.</p>
+            <div class="timeline-tags"><span>Certification</span><span>Full-Stack</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="300">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2021</span>
+            <h3>Electronics &amp; Arduino Enthusiast</h3>
+            <p>Started building IoT projects with Arduino and Raspberry Pi. Contributed to open-source firmware repositories and local maker communities.</p>
+            <div class="timeline-tags"><span>Arduino</span><span>Open Source</span><span>IoT</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="400">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2020</span>
+            <h3>Started Software Development</h3>
+            <p>Began programming journey with Python and web technologies. Built first projects and discovered passion for bridging physical hardware with software systems.</p>
+            <div class="timeline-tags"><span>Python</span><span>HTML/CSS</span><span>JavaScript</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2 class="section-title">Let's <em>build</em> something</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">Whether you have a project idea, need a collaborator, or just want to chat about tech — my inbox is always open.</p>
+          <div class="contact-items">
+            <a href="mailto:marden@email.com" class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div><strong>Email</strong><span>mardenbarangan0728@email.com</span></div>
+            </a>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><strong>Location</strong><span>Balatong Laoag City, Ilocos Norte, Philippines</span></div>
+            </div>
+          </div>
+          <div class="social-links">
+            <!-- ✏️ REPLACE the href values below with your actual profile URLs -->
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry..." />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Message sent! I'll get back to you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">M<span>.</span></a>
+          <p>Developer bridging hardware and code. Building from Laoag, Philippines.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Domains</h4>
+          <ul>
+            <li><a href="#projects">Web Development</a></li>
+            <li><a href="#projects">Software Engineering</a></li>
+            <li><a href="#projects">Electronics</a></li>
+            <li><a href="#projects">IoT Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Marden. All rights reserved.</p>
+        <a href="#home" class="back-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cursor.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/hero-canvas.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects-filter.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

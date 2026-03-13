@@ -1,0 +1,104 @@
+/* ═══════════════════════════════════════════
+   ANIMATIONS.CSS — Keyframes & Reveal Animations
+   ═══════════════════════════════════════════ */
+
+/* ── Keyframes ────────────────────────────── */
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50%       { opacity: 1; transform: scaleY(1.2); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes nameReveal {
+  from { opacity: 0; transform: translateY(60px) skewY(3deg); }
+  to   { opacity: 1; transform: translateY(0) skewY(0deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Hero Entrance ────────────────────────── */
+.hero-badge    { animation: fadeInUp 0.6s ease 0.2s both; }
+.hero-name     { animation: nameReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.hero-tagline  { animation: fadeInUp 0.7s ease 0.55s both; }
+.hero-sub      { animation: fadeInUp 0.7s ease 0.7s both; }
+.hero-cta      { animation: fadeInUp 0.7s ease 0.85s both; }
+.hero-stats    { animation: fadeInUp 0.7s ease 1.0s both; }
+.hero-scroll   { animation: fadeInUp 0.7s ease 1.2s both; }
+
+/* ── Scroll Reveal ────────────────────────── */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal        { transform: translateY(40px); }
+.reveal-left   { transform: translateX(-50px); }
+.reveal-right  { transform: translateX(50px); }
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger delays via data-delay attribute — handled in JS */
+
+/* ── Floating Glow Badge ─────────────────── */
+.about-badge-card {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ── Skill Card Icon Glow ─────────────────── */
+.skill-card:hover .skill-card-icon {
+  box-shadow: 0 0 20px rgba(0,255,136,0.3);
+}
+
+/* ── Timeline dot pulse ───────────────────── */
+.timeline-dot::after {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* ── Nav active link ──────────────────────── */
+.nav-links a.active {
+  color: var(--accent-green);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
